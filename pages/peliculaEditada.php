@@ -145,16 +145,17 @@
     </main>  
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
+    <script type="module">
         AOS.init();
 
+        import { API_SERVER } from "../../js/constantes.js";
          //Función para cargar los datos de la película en el formulario
         async function cargarDatosPelicula() {
             try {
                 const idPelicula = obtenerParametroUrl('id'); // Obtener el ID de la película de la URL
 
                 // Realizar la solicitud GET a la API para obtener los detalles de la película
-                const response = await fetch(`${API_SERVER}?id=${idPelicula}`);
+                const response = await fetch(`${API_SERVER}/?id=${idPelicula}`);
                 if (!response.ok) {
                     throw new Error('No se pudo obtener los detalles de la película');
                 }
