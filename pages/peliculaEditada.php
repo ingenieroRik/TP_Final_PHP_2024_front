@@ -1,3 +1,5 @@
+
+<?php  session_start(); ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -28,7 +30,7 @@
                 <h2 class="tituloAdministrador">Editar película</h2>
 
                 <?php
-                session_start();
+               
                 if (isset($_SESSION['mensaje'])) {
                     echo "<p class='success' style='text-align:center;'>{$_SESSION['mensaje']}</p>";
                     unset($_SESSION['mensaje']);
@@ -46,7 +48,7 @@
                       
                 <div>
                     <label for="titulo">Título:</label>                  
-                    <input type="text" id="titulo" name="titulo" value="<?php echo ($_GET['titulo']) ? $_GET['titulo'] : ''; ?>">
+                    <input type="text" id="titulo" name="titulo" value="<?php echo isset($_GET['titulo']) ? $_GET['titulo'] : ''; ?>">
                     <?php 
                     if (isset($_GET['error1'])){
                         $error1 = $_GET['error1'];            
@@ -57,7 +59,7 @@
 
                 <div>
                     <label for="genero">Género:</label>                 
-                    <input type="text" id="genero" name="genero" value="<?php echo ($_GET['genero']) ? ($_GET['genero']) : ''; ?>">
+                    <input type="text" id="genero" name="genero" value="<?php echo isset($_GET['genero']) ? ($_GET['genero']) : ''; ?>">
                     <?php 
                     if (isset($_GET['error2'])){
                         $error2 = $_GET['error2'];            
@@ -68,7 +70,7 @@
 
                 <div>
                     <label for="calificacion">Clasificación:</label>
-                    <input type="text" id="calificacion" name="calificacion" value="<?php echo ($_GET['calificacion']) ? ($_GET['calificacion']) : ''; ?>">
+                    <input type="text" id="calificacion" name="calificacion" value="<?php echo isset($_GET['calificacion']) ? ($_GET['calificacion']) : ''; ?>">
                     <?php 
                     if (isset($_GET['error3'])){
                         $error3 = $_GET['error3'];            
@@ -79,7 +81,7 @@
 
                 <div>
                     <label for="descripcion">Descripción:</label>
-                    <input type="text" id="descripcion" name="descripcion" value="<?php echo ($_GET['descripcion']) ? ($_GET['descripcion']) : ''; ?>">
+                    <input type="text" id="descripcion" name="descripcion" value="<?php echo isset($_GET['descripcion']) ? ($_GET['descripcion']) : ''; ?>">
                    
                     <?php 
                     if (isset($_GET['error4'])){
@@ -91,7 +93,7 @@
                 
                 <div>
                     <label for="anio">Año de Estreno:</label>
-                    <input type="text" id="anio" name="anio" value="<?php echo ($_GET['anio']) ? ($_GET['anio']) : ''; ?>">
+                    <input type="text" id="anio" name="anio" value="<?php echo isset($_GET['anio']) ? ($_GET['anio']) : ''; ?>">
                   <?php  
                     if (isset($_GET['error5'])){
                         $error5 = $_GET['error5'];            
@@ -101,7 +103,7 @@
                 </div>
                 <div>
                     <label for="estrellas">Estrellas:</label>
-                    <input type="text" id="estrellas" name="estrellas" value="<?php echo ($_GET['estrellas']) ? ($_GET['estrellas']) : ''; ?>">
+                    <input type="text" id="estrellas" name="estrellas" value="<?php echo isset($_GET['estrellas']) ? ($_GET['estrellas']) : ''; ?>">
                    <?php  
                     if (isset($_GET['error6'])){
                         $error6 = $_GET['error6'];            
@@ -111,7 +113,7 @@
                 </div>
                 <div>
                     <label for="duracion">Duración:</label>
-                    <input type="text" id="duracion" name="duracion" value="<?php echo ($_GET['duracion']) ? ($_GET['duracion']) : ''; ?>">
+                    <input type="text" id="duracion" name="duracion" value="<?php echo isset($_GET['duracion']) ? ($_GET['duracion']) : ''; ?>">
                    
                     <?php 
                     if (isset($_GET['error7'])){
@@ -122,7 +124,7 @@
                 </div>
                 <div>
                     <label for="img_url">Elige una imagen JPG:</label>
-                    <input type="text" name="img_url"  id="img_url" accept=".jpg, .jpeg" value="<?php echo ($_GET['img_url']) ? ($_GET['img_url']) : ''; ?>" hidden> 
+                    <input type="text" name="img_url"  id="img_url" accept=".jpg, .jpeg" value="<?php echo isset($_GET['img_url']) ? ($_GET['img_url']) : ''; ?>" hidden> 
                     <input type="file" name="img_url" id="img_url" accept=".jpg, .jpeg">             
                     <?php 
                     if (isset($_GET['error8'])){
