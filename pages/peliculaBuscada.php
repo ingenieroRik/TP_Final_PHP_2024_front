@@ -16,7 +16,7 @@
 <body>
     <header class="header">
         <nav class="navegacion">
-            <a class="anclaLogo" href="../index.html">
+            <a class="anclaLogo" href="../index.php">
                 <i class="fas fa-film" aria-hidden="true"></i>
                 <span>CAC-Movies</span>
             </a>
