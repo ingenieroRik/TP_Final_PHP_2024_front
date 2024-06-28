@@ -154,7 +154,7 @@
                 const idPelicula = obtenerParametroUrl('id'); // Obtener el ID de la película de la URL
 
                 // Realizar la solicitud GET a la API para obtener los detalles de la película
-                const response = await fetch(`http://localhost:8001/?id=${idPelicula}`);
+                const response = await fetch(`${API_SERVER}?id=${idPelicula}`);
                 if (!response.ok) {
                     throw new Error('No se pudo obtener los detalles de la película');
                 }
