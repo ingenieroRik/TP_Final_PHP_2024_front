@@ -60,7 +60,7 @@ const cargarPeliculasTendencia = async () => {
             const eliminarPelicula = async (movieId) => {
                 if (confirm('¿Estás seguro de que deseas eliminar esta película?')) {
                     try {
-                        const response = await fetch(`${API_SERVER}?id=${movieId}`, {
+                        const response = await fetch(`${API_SERVER}/?id=${movieId}`, {
                             method: 'DELETE',
                             headers: {
                                 'Content-Type': 'application/json'
