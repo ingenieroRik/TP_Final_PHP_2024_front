@@ -1,5 +1,7 @@
 
-
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -32,7 +34,7 @@
                 
 
                 <?php
-                session_start();
+               
                 if (isset($_SESSION['mensaje'])) {
                     echo "<p class='success' style='text-align:center;'>{$_SESSION['mensaje']}</p>";
                     unset($_SESSION['mensaje']);
