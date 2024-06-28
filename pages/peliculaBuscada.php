@@ -1,3 +1,7 @@
+<?php
+ob_start(); // para evitar enviar ningun encabezado antes de iniciar session
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -35,7 +39,7 @@
             <div id="peliculas" class="buscadas">
             
             <?php
-                session_start();
+              
                 if (isset($_SESSION['peliculas'])) {
                     $peliculas_json = $_SESSION['peliculas'];
                     $peliculas = json_decode($peliculas_json, true);
