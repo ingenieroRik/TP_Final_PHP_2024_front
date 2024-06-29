@@ -17,7 +17,12 @@ const options = {
 const cargarPeliculasTendencia = async (page = 1) => {
     // Realizamos una petición fetch a la API para obtener las películas populares
     //const response = await fetch(`${API_SERVER}/movie/popular?page=${page}`, options);
-    const response = await fetch(API_SERVER);
+   // const response = await fetch(API_SERVER);
+
+    const response = await fetch(`${API_SERVER}/index.php?buscar=${encodeURIComponent(query)}`, {
+        mode: 'cors'
+    });
+
     const data = await response.json(); // Convertimos la respuesta a JSON
     const movies = data;// Extraemos las películas de la respuesta
     //console.log(movies);
