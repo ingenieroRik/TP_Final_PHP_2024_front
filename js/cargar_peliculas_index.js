@@ -19,7 +19,7 @@ const cargarPeliculasTendencia = async (page = 1) => {
     //const response = await fetch(`${API_SERVER}/movie/popular?page=${page}`, options);
    // const response = await fetch(API_SERVER);
 
-    const response = await fetch(`${API_SERVER}/index.php?buscar=${encodeURIComponent(query)}`, {
+    const response = await fetch(`${API_SERVER}}`, {
         mode: 'cors'
     });
 
