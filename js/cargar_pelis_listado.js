@@ -62,7 +62,7 @@ const cargarPeliculasTendencia = async () => {
                     try {
                         const response = await fetch(`${API_SERVER}/?id=${movieId}`, {
                             method: 'DELETE',
-                            mode: 'cors' ,
+                           
                             headers: {
                                'Content-Type': 'application/json'
                             },
