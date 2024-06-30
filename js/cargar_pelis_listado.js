@@ -1,5 +1,5 @@
 
-import { API_SERVER4 , API_SERVER} from "./constantes.js";
+import { API_SERVER } from "./constantes.js";
 
 
 
@@ -62,7 +62,7 @@ const cargarPeliculasTendencia = async () => {
                 if (confirm('¿Estás seguro de que deseas eliminar esta película?')) {
                     try {
                         //const response = await fetch(`${API_SERVER}/?id=${movieId}`, {
-                        const response = await fetch(`${API_SERVER4}/?id=${movieId}`, {
+                        const response = await fetch(`${API_SERVER}/?id=${movieId}`, {
                             method: 'DELETE',                         
                             headers: {
                                'Content-Type': 'application/json'
