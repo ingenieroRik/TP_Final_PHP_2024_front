@@ -89,5 +89,28 @@
     </script>
     <script src="../js/validar_pelicula.js"></script>
     <script type="module" src="../js/cargar_server.js"></script>
+    <script>
+        //para mostrar un alert con el mensaje
+    document.getElementById('form-pelicula').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evitar que se envíe el formulario de forma tradicional
+      
+        fetch(API_SERVER, {
+          method: 'POST',
+          body: new FormData(document.getElementById('form-pelicula'))
+        })
+        .then(response => response.json())
+        .then(data => {
+          if(data[0] === 'success') {
+            alert(data[1]);
+          } else {
+            alert('Error al guardar la película');
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('Ocurrió un error al intentar guardar la película');
+        });
+      });
+    </script>
 </body>
 </html>
