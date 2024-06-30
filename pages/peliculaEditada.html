@@ -96,10 +96,6 @@
         AOS.init();
 
         import { API_SERVER } from "../../js/constantes.js";    
-
-
-        
-
          //Función para cargar los datos de la película en el formulario
         async function cargarDatosPelicula() {
             try {
@@ -112,10 +108,7 @@
                 }
 
                 const data = await response.json(); // Convertir la respuesta a JSON
-
-
-
-                
+             
                 if (data.length > 0) {
                     const pelicula = data[0]; // Obtener el primer elemento del array (la película)
                     // Llenar los campos del formulario con los datos obtenidos

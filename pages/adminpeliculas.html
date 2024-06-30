@@ -83,13 +83,10 @@
             </form>
         </section>
     </main>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-    <script src="../js/validar_pelicula.js"></script>
-    <script type="module" src="../js/cargar_server.js"></script>
+    
     <script  type="module">
+
+     import { API_SERVER } from "../../js/constantes.js";    
         //para mostrar un alert con el mensaje
     document.getElementById('form-pelicula').addEventListener('submit', function(event) {
         event.preventDefault(); // Evitar que se envíe el formulario de forma tradicional
@@ -112,5 +109,11 @@
         });
       });
     </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="../js/validar_pelicula.js"></script>
+    <script type="module" src="../js/cargar_server.js"></script>
 </body>
 </html>
