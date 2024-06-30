@@ -3,8 +3,8 @@
 
 export const API_SERVER2 = 'https://api.themoviedb.org/3';
 
-//export const API_SERVER = 'http://localhost:5501';
-
+export const API_SERVER4 = 'http://127.0.0.1:8080';
+export const API_SERVER5 = 'tp-final-php-2024.zeabur.internal:8080';
 
 // url de api en zeabur
 export const API_SERVER = 'https://peliculas-cac2024.zeabur.app';
